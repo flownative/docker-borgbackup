@@ -17,7 +17,23 @@ chmod 775 /usr/local/bin/borg
 Given that `/usr/local/bin` is in your `PATH`, you can get a help screen like so:
 
 ````bash
+$ borg
 
+usage: borg [-V] [-h] [--critical] [--error] [--warning] [--info] [--debug]
+            [--debug-topic TOPIC] [-p] [--log-json] [--lock-wait SECONDS]
+            [--show-version] [--show-rc] [--umask M] [--remote-path PATH]
+            [--remote-ratelimit RATE] [--consider-part-files]
+            [--debug-profile FILE] [--rsh RSH]
+            <command> ...
+
+Borg - Deduplicated Backups
+
+optional arguments:
+  -V, --version         show version number and exit
+
+Common options:
+  -h, --help            show this help message and exit
+…
 ````
 ## Initializing a Backup
 
