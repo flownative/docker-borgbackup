@@ -11,17 +11,6 @@
 # @return void
 #
 borg_get_borg() {
-
-        cat <<- 'EOM'
-#!/bin/bash
-
-SSH_DIR=$(dirname ~/.ssh/x)
-
-docker run -ti \
-    --name borgbackup \
-    --rm \
-    -v "${SSH_DIR}":/root/.ssh \
-    flownative/borgbackup:dev "$@"
-EOM
+        cat "${BORG_BASE_PATH}/scripts/borg.sh" > /borg-test.sh
+        cat "${BORG_BASE_PATH}/scripts/borg.sh"
 }
-

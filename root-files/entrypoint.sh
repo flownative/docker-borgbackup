@@ -12,4 +12,9 @@ if [[ "$*" = *"shell"* ]]; then
     exit 0
 fi
 
+if [[ "$*" = *"get-borg"* ]]; then
+    borg_get_borg
+    exit 0
+fi
+
 exec "${BORG_BASE_PATH}/bin/borg" "$@"

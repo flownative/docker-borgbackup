@@ -12,7 +12,10 @@ $ docker run …
 
 ## Installation
 
-tbd.
+````bash
+docker run --name borg --rm flownative/borgbackup get-borg > /usr/local/bin/borg
+chmod 775 /usr/local/bin/borg
+````
 
 ## Initializing a Backup
 
