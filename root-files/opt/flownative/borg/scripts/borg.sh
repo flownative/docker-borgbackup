@@ -50,6 +50,8 @@ set -- \
     -e "BORG_SOURCE_MOUNT_DIR=${BORG_SOURCE_MOUNT_DIR}" \
     flownative/borgbackup "$@"
 
-echo "$@"
-
-$sudo docker run -ti "$@"
+# Check if this script runs in an (interactive) terminal:
+case $- in
+  *i*) $sudo docker run -ti "$@";;
+  *) $sudo docker run "$@";;
+esac

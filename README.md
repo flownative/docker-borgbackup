@@ -58,17 +58,16 @@ export BORG_SOURCE_MOUNT_DIR=/nextcloud/data
 ... you can create new archive like so:
 
 ```bash
-
-./borg create                         \
-      --verbose                       \
-      --list                          \
-      --stats                         \
-      --show-rc                       \
-      --compression lz4               \
-      --exclude-caches                \
-      --exclude 'appdata_*/preview/*' \
-                                      \
-      ::'nextcloud-{now}'             \
+./borg create                                              \
+      --verbose                                            \
+      --list                                               \
+      --stats                                              \
+      --show-rc                                            \
+      --compression lz4                                    \
+      --exclude ${BORG_SOURCE_MOUNT_DIR}/video             \
+      --exclude ${BORG_SOURCE_MOUNT_DIR}/*/files_trashbin  \
+      --exclude ${BORG_SOURCE_MOUNT_DIR}/appdata_*/preview \
+                                                           \
+      ::'nextcloud-{now}'                                  \
       ${BORG_SOURCE_MOUNT_DIR}
-
 ```
