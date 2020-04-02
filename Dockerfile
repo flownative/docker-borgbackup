@@ -1,4 +1,4 @@
-FROM flownative/base:buster
+FROM bitnami/minideb:buster
 MAINTAINER Robert Lemke <robert@flownative.com>
 
 LABEL org.label-schema.name="Borg Backup"
