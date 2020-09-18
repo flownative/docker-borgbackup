@@ -13,9 +13,13 @@ ARG BORG_VERSION
 ENV BORG_VERSION ${BORG_VERSION}
 
 ENV FLOWNATIVE_LIB_PATH=/opt/flownative/lib \
+    FLOWNATIVE_LOG_PATH="/opt/flownative/log" \
+    FLOWNATIVE_LOG_PATH_AND_FILENAME="/dev/stdout" \
     BORG_BASE_PATH=/opt/flownative/borg \
     PATH="/opt/flownative/borg/bin:$PATH" \
     LOG_DEBUG=true
+
+ENV FLOWNATIVE_LOG_PATH_AND_FILENAME=/dev/stdout
 
 COPY --from=docker.pkg.github.com/flownative/bash-library/bash-library:1 /lib $FLOWNATIVE_LIB_PATH
 
