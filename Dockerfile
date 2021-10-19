@@ -18,7 +18,7 @@ ENV FLOWNATIVE_LIB_PATH=/opt/flownative/lib \
 
 ENV FLOWNATIVE_LOG_PATH_AND_FILENAME=/dev/stdout
 
-COPY --from=docker.pkg.github.com/flownative/bash-library/bash-library:1 /lib $FLOWNATIVE_LIB_PATH
+COPY --from=europe-docker.pkg.dev/flownative/docker/bash-library /lib $FLOWNATIVE_LIB_PATH
 
 COPY root-files /
 RUN /build.sh
