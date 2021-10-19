@@ -9,9 +9,6 @@ LABEL org.label-schema.vendor="Flownative GmbH"
 # Borg
 # Latest versions: https://packages.debian.org/buster/nginx
 
-ARG BORG_VERSION
-ENV BORG_VERSION ${BORG_VERSION}
-
 ENV FLOWNATIVE_LIB_PATH=/opt/flownative/lib \
     FLOWNATIVE_LOG_PATH="/opt/flownative/log" \
     FLOWNATIVE_LOG_PATH_AND_FILENAME="/dev/stdout" \
