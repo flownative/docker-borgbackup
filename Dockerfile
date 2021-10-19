@@ -1,5 +1,6 @@
-FROM bitnami/minideb:buster
-MAINTAINER Robert Lemke <robert@flownative.com>
+FROM bitnami/minideb:bullseye
+
+LABEL org.opencontainers.image.authors="Robert Lemke <robert@flownative.com>"
 
 LABEL org.label-schema.name="Borg Backup"
 LABEL org.label-schema.description="Docker image providing the Borg backup client"
@@ -7,7 +8,7 @@ LABEL org.label-schema.vendor="Flownative GmbH"
 
 # -----------------------------------------------------------------------------
 # Borg
-# Latest versions: https://packages.debian.org/buster/nginx
+# Latest versions: https://packages.debian.org/bullseye/borgbackup
 
 ENV FLOWNATIVE_LIB_PATH=/opt/flownative/lib \
     FLOWNATIVE_LOG_PATH="/opt/flownative/log" \
