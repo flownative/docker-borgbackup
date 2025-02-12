@@ -1,4 +1,4 @@
-FROM bitnami/minideb:bullseye
+FROM bitnami/minideb:bookworm
 
 LABEL org.opencontainers.image.authors="Robert Lemke <robert@flownative.com>"
 
@@ -8,7 +8,7 @@ LABEL org.label-schema.vendor="Flownative GmbH"
 
 # -----------------------------------------------------------------------------
 # Borg
-# Latest versions: https://packages.debian.org/bullseye/borgbackup
+# Latest versions: https://packages.debian.org/bookworm/borgbackup
 
 ENV FLOWNATIVE_LIB_PATH=/opt/flownative/lib \
     FLOWNATIVE_LOG_PATH="/opt/flownative/log" \
